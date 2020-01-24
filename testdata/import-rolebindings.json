@@ -1,0 +1,27 @@
+{
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "kind": "RoleBinding",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"rbac.authorization.k8s.io/v1\",\"kind\":\"RoleBinding\",\"metadata\":{\"annotations\":{},\"name\":\"read-pods\",\"namespace\":\"default\"},\"roleRef\":{\"apiGroup\":\"rbac.authorization.k8s.io\",\"kind\":\"Role\",\"name\":\"pod-reader\"},\"subjects\":[{\"apiGroup\":\"rbac.authorization.k8s.io\",\"kind\":\"User\",\"name\":\"developer\"}]}\n"
+    },
+    "creationTimestamp": "2020-01-22T09:08:06Z",
+    "name": "read-pods",
+    "namespace": "default",
+    "resourceVersion": "52176",
+    "selfLink": "/apis/rbac.authorization.k8s.io/v1/namespaces/default/rolebindings/read-pods",
+    "uid": "a39fa6b0-54b9-4d04-b564-1e236f7919c9"
+  },
+  "roleRef": {
+    "apiGroup": "rbac.authorization.k8s.io",
+    "kind": "Role",
+    "name": "pod-reader"
+  },
+  "subjects": [
+    {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "User",
+      "name": "developer"
+    }
+  ]
+}

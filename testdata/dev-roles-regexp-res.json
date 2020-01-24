@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "deve*",
+    "roles": [
+      {
+        "apiVersion": "rbac.authorization.k8s.io/v1",
+        "kind": "Role",
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"rbac.authorization.k8s.io/v1\",\"kind\":\"Role\",\"metadata\":{\"annotations\":{},\"name\":\"pod-reader\",\"namespace\":\"default\"},\"rules\":[{\"apiGroups\":[\"\"],\"resources\":[\"pods\"],\"verbs\":[\"get\",\"watch\",\"list\"]}]}\n"
+          },
+          "creationTimestamp": "2020-01-22T09:07:46Z",
+          "name": "pod-reader",
+          "namespace": "default",
+          "resourceVersion": "52131",
+          "selfLink": "/apis/rbac.authorization.k8s.io/v1/namespaces/default/roles/pod-reader",
+          "uid": "37f033ee-a937-4c70-b870-2668d72fb383"
+        },
+        "rules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "resources": [
+              "pods"
+            ],
+            "verbs": [
+              "get",
+              "watch",
+              "list"
+            ]
+          }
+        ]
+      }
+    ],
+    "clusterroles": null
+  }
+]
