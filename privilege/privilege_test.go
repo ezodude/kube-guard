@@ -1,4 +1,4 @@
-package privelage_test
+package privilege_test
 
 import (
 	"path/filepath"
@@ -6,7 +6,7 @@ import (
 	"log"
 	"io/ioutil"
 
-	"github.com/ezodude/kube-guard/privelage"
+	"github.com/ezodude/kube-guard/privilege"
 	"github.com/ezodude/kube-guard/testutil"
 	"k8s.io/client-go/kubernetes/fake"
 )
@@ -39,7 +39,7 @@ func TestSubjectHasRoleJsonFormatted(t *testing.T) {
 	}
 
 	for _, tc := range cases {
-		q := privelage.NewQuery().Client(fakeK8s).Subjects(tc.subjects).ResultFormat("JSON")
+		q := privilege.NewQuery().Client(fakeK8s).Subjects(tc.subjects).ResultFormat("JSON")
 
 		expected := testutil.MustReadFile(t, filepath.Join("..", "testdata", tc.expectedPath))
 		actual, err := q.Do()
@@ -58,7 +58,7 @@ func TestSubjectHasRoleYamlFormatted(t *testing.T) {
 	mustPrepRoleAndBinding(fakeK8s, rolePath, bindingPath)
 
 	subjects := []string{"developer"}
-	q := privelage.NewQuery().Client(fakeK8s).Subjects(subjects).ResultFormat("YAML")
+	q := privilege.NewQuery().Client(fakeK8s).Subjects(subjects).ResultFormat("YAML")
 
 	expected := testutil.MustReadFile(t, filepath.Join("..", "testdata", "dev-roles-res.yaml"))
 	actual, err := q.Do()

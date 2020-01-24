@@ -1,4 +1,4 @@
-package privelage
+package privilege
 
 import (
 	"encoding/json"

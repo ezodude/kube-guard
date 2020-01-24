@@ -18,7 +18,7 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
 
-	"github.com/ezodude/kube-guard/privelage"
+	"github.com/ezodude/kube-guard/privilege"
 )
 
 func newK8s() (kubernetes.Interface, error) {
@@ -50,7 +50,7 @@ func (a *app) initialize() {
 	log.Println("App initializing")
 	a.router = mux.NewRouter()
 
-	a.router.HandleFunc("/api/v0.1/privelage/search", a.searchHandler).
+	a.router.HandleFunc("/api/v0.1/privilege/search", a.searchHandler).
 		Methods("GET").
 		Headers("Content-Type", "application/json")
 }
@@ -76,7 +76,7 @@ func (a *app) searchHandler(w http.ResponseWriter, r *http.Request) {
 
 	log.Printf("Handler searchHandler payload:[%#v]", payload)
 
-	res, err := privelage.NewQuery().
+	res, err := privilege.NewQuery().
 		Client(a.k8s).
 		Subjects(payload.Subjects).
 		ResultFormat(payload.Format).

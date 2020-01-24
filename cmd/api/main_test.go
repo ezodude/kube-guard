@@ -41,7 +41,7 @@ func TestSubjectHasNoRoles(t *testing.T) {
 	rr := testutil.ServeFakeHTTP(
 		a.router,
 		"GET",
-		"/api/v0.1/privelage/search",
+		"/api/v0.1/privilege/search",
 		[]string{"Content-Type: application/json"},
 		`{ "subjects": ["unknown"], "format": "json" }`,
 	)

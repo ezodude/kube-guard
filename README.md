@@ -6,7 +6,7 @@ To run the API, please clone the repo to the correct location in the `GOPATH`.
 
 Once cloned, please navigate to the project's root directory.
 
-## Finding a subject's privelages (roles)
+## Finding a subject's privileges (roles)
 
 - You can search for more than one `subject` at once.
 
@@ -14,7 +14,7 @@ Once cloned, please navigate to the project's root directory.
 
 - You can use a RegExp to enable a wild card search.
 
-- All listed privelages are ordered by `subject` alphabetically.
+- All listed privileges are ordered by `subject` alphabetically.
 
 ## Minikube
 
@@ -151,14 +151,14 @@ go build
 Retrieving data as `JSON`
 
 ```shell
-curl -XGET http://localhost:8080/api/v0.1/privelage/search \
+curl -XGET http://localhost:8080/api/v0.1/privilege/search \
   -d '{"subjects":["developer"],"format":"JSON"}' \
   -H 'Content-Type:application/Shutting down the API server
 
 Retrieving data as `YAML`
 
 ```shell
-curl -XGET http://localhost:8080/api/v0.1/privelage/search \
+curl -XGET http://localhost:8080/api/v0.1/privilege/search \
   -d '{"subjects":["developer"],"format":"YAML"}' \
   -H 'Content-Type:application/json'
 ```
@@ -166,7 +166,7 @@ curl -XGET http://localhost:8080/api/v0.1/privelage/search \
 Using RegExp wildcards
 
 ```shell
-curl -XGET http://localhost:8080/api/v0.1/privelage/search \
+curl -XGET http://localhost:8080/api/v0.1/privilege/search \
   -d '{"subjects":["developer", "deve*"],"format":"JSON"}' \
   -H 'Content-Type:application/json'
 ```
