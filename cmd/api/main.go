@@ -10,6 +10,7 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -89,7 +90,14 @@ func (a *app) searchHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	log.Printf("%s status [%d]\n", r.RequestURI, http.StatusOK)
-	w.Header().Set("Content-Type", "application/json")
+
+	switch strings.ToLower(payload.Format) {
+	case "yaml", "yml":
+		w.Header().Set("Content-Type", "application/x-yaml")
+	default:
+		w.Header().Set("Content-Type", "application/json")
+	}
+
 	w.Write(res)
 }
 
