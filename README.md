@@ -14,9 +14,9 @@ Follow the steps below to get up and running with a bootstrapped `Minikube`.
 
 ## Minikube Installation
 
-If Minikube is not installed, then please use [instructions to install it](https://kubernetes.io/docs/tasks/tools/install-minikube/).
+If Minikube is not installed, then please use [instructions here to install it](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
-## RBAC, Setup - User
+## RBAC, setup a user
 
 We're looking to create a `developer` user bound to a `pod-reader` role.
 
@@ -82,7 +82,7 @@ You can check that it is successfully added to kubeconfig:
 kubectl config view
 ```
 
-## RBAC, Grant a role to the user
+## RBAC, grant a role to the user
 
 ### Deploy both role.yaml and role-binding.yaml to k8s
 
