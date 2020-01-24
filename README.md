@@ -154,6 +154,7 @@ Retrieving data as `JSON`
 curl -XGET http://localhost:8080/api/v0.1/privilege/search \
   -d '{"subjects":["developer"],"format":"JSON"}' \
   -H 'Content-Type:application/Shutting down the API server
+```
 
 Retrieving data as `YAML`
 
