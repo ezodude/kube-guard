@@ -6,6 +6,16 @@ To run the API, please clone the repo to the correct location in the `GOPATH`.
 
 Once cloned, please navigate to the project's root directory.
 
+## Finding a subject's privelages (roles)
+
+- You can search for more than one `subject` at once.
+
+- You can retrieve results as `JSON` or `YAML`.
+
+- You can use a RegExp to enable a wild card search.
+
+- All listed privelages are ordered by `subject` alphabetically.
+
 ## Minikube
 
 Kube Guard assumes you have `MiniKube` installed locally and bootstrapped with users and roles.
@@ -136,17 +146,7 @@ go build
 ./api
 ```
 
-### Finding a subject's privelages (roles)
-
-- You can search for more than one `subject` at once.
-
-- You can retrieve results as `JSON` or `YAML`.
-
-- You can use a RegExp to enable a wild card search.
-
-- All listed privelages are ordered by `subject` alphabetically.
-
-#### Sample Requests
+### Sample Requests
 
 Retrieving data as `JSON`
 
