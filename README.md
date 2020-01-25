@@ -134,9 +134,7 @@ kubectl get rolebindings
 
 ## Up and running with Kube Guard
 
-First clone the repo to the correct location in the `GOPATH`.
-
-Once cloned, please navigate to the project's root directory.
+Ensure you're in the project's root directory.
 
 ### Running the API server
 
